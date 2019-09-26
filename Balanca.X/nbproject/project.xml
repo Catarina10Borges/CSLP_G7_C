@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://www.netbeans.org/ns/project/1">
+    <type>com.microchip.mplab.nbide.embedded.makeproject</type>
+    <configuration>
+        <data xmlns="http://www.netbeans.org/ns/make-project/1">
+            <name>Balanca</name>
+            <creation-uuid>b2e8c6cf-7fbf-4685-a501-efadedc1a3df</creation-uuid>
+            <make-project-type>0</make-project-type>
+            <c-extensions>c</c-extensions>
+            <cpp-extensions/>
+            <header-extensions>h</header-extensions>
+            <asminc-extensions/>
+            <sourceEncoding>ISO-8859-1</sourceEncoding>
+            <make-dep-projects/>
+            <sourceRootList>
+                <sourceRootElem>.</sourceRootElem>
+                <sourceRootElem>../BalancaCommon/ConfigBits</sourceRootElem>
+                <sourceRootElem>../BalancaCommon/UART</sourceRootElem>
+                <sourceRootElem>../BalancaCommon/ADC</sourceRootElem>
+                <sourceRootElem>../BalancaCommon/Timers_int</sourceRootElem>
+                <sourceRootElem>../BalancaCommon/PWM</sourceRootElem>
+                <sourceRootElem>../BalancaCommon/Temperature</sourceRootElem>
+                <sourceRootElem>../BalancaCommon/Weigth</sourceRootElem>
+                <sourceRootElem>../BalancaCommon/Height</sourceRootElem>
+                <sourceRootElem>../BalancaCommon/Timers_poll</sourceRootElem>
+                <sourceRootElem>../BalancaCommon/Weight</sourceRootElem>
+            </sourceRootList>
+            <confList>
+                <confElem>
+                    <name>default</name>
+                    <type>2</type>
+                </confElem>
+            </confList>
+            <formatting>
+                <project-formatting-style>false</project-formatting-style>
+            </formatting>
+        </data>
+    </configuration>
+</project>
