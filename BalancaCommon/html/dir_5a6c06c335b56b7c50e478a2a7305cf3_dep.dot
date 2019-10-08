@@ -1,0 +1,8 @@
+digraph "Weight" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  dir_5a6c06c335b56b7c50e478a2a7305cf3 [shape=box, label="Weight", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_5a6c06c335b56b7c50e478a2a7305cf3.html"];
+  dir_739e530fc6fa038c379ec8b4170d8153 [shape=box label="ADC" URL="dir_739e530fc6fa038c379ec8b4170d8153.html"];
+  dir_5a6c06c335b56b7c50e478a2a7305cf3->dir_739e530fc6fa038c379ec8b4170d8153 [headlabel="1", labeldistance=1.5 headhref="dir_000007_000000.html"];
+}

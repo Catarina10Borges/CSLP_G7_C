@@ -1,10 +1,11 @@
-/*
- * File: config_timer.h
+/**
+ * @file config_timer.h
  *
- * Author: Catarina Borges, 73865
- * Author: Ricardo Torres, 64507
+ * @author Catarina Borges, 73865
+ * @author Ricardo Torres, 64507
  *
- * Created on 9 de Março de 2019, 10:02
+ * @date Created on 9 de Marco de 2019, 10:02
+ * @brief Define prototypes and constants of config_timer.c 
 */
 
 #ifndef ConfigTIMER_H
@@ -32,6 +33,7 @@
 #define DIVIDER_CONST3 19999 
 #define DIVIDER_CONST4 499 // 80KHz
 
+// Define prototypes (public interface)
 void config_timer2(void);
 void config_timer3(void);
 void config_timer4(void);

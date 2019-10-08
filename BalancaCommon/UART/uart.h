@@ -1,14 +1,15 @@
-/* 
- * File:   uart.h
- * Author: Paulo Pedreiras
+/** 
+ * @file:   uart.h
+ * @author: Paulo Pedreiras
  *
- * Created on Jan 28, 2019
+ * @date Created on Jan 28, 2019
  * MPLAB X IDE v5.10 + XC32 v2.15
  *
  * Target: Digilent chipKIT MAx32 board 
  * 
  * Overview:
- *          Set of functions to handle the UART       
+ *          Set of functions to handle the UART   
+ @brief Define prototypes and return codes of uart.c    
  
  * Notes: Partially based on the bootloader code from Microchip
  * 

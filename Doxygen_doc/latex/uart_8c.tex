@@ -1,0 +1,100 @@
+\hypertarget{uart_8c}{}\section{Balanca\+Common/\+U\+A\+R\+T/uart.c File Reference}
+\label{uart_8c}\index{Balanca\+Common/\+U\+A\+R\+T/uart.\+c@{Balanca\+Common/\+U\+A\+R\+T/uart.\+c}}
+
+
+Set of functions to handle the U\+A\+RT.  
+
+
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}uart.\+h\char`\"{}}\newline
+Include dependency graph for uart.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{uart_8c_aa8a279fa598352045040b41a7349be32}{Uart\+Init} (uint64\+\_\+t pbclock, uint32\+\_\+t br)
+\item 
+int \hyperlink{uart_8c_a40b4da769436009e31f46de19864a2ac}{Uart\+Close} (void)
+\item 
+int \hyperlink{uart_8c_a72472a028659fcc43465788be15420d8}{Get\+Char} (uint8\+\_\+t $\ast$byte)
+\item 
+void \hyperlink{uart_8c_a20ee1a24682de469e87cd0220987bbf8}{Put\+Char} (uint8\+\_\+t tx\+Char)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Set of functions to handle the U\+A\+RT. 
+
+\begin{DoxyAuthor}{Author}
+Paulo Pedreiras
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Created on Jan 28, 2019 M\+P\+L\+AB X I\+DE v5.\+10 + X\+C32 v2.\+15
+\end{DoxyDate}
+Target\+: Digilent chip\+K\+IT M\+Ax32 board
+
+Overview\+: Notes\+: Partially based on the bootloader code from Microchip
+
+Revisions\+: 2017-\/10-\/25\+: initial release 2019-\/01-\/28\+: updated to M\+P\+L\+AB X I\+DE v5.\textbackslash{}0 + X\+C32 v2.\+15 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{uart_8c_a72472a028659fcc43465788be15420d8}\label{uart_8c_a72472a028659fcc43465788be15420d8}} 
+\index{uart.\+c@{uart.\+c}!Get\+Char@{Get\+Char}}
+\index{Get\+Char@{Get\+Char}!uart.\+c@{uart.\+c}}
+\subsubsection{\texorpdfstring{Get\+Char()}{GetChar()}}
+{\footnotesize\ttfamily int Get\+Char (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{byte }\end{DoxyParamCaption})}
+
+~\newline
+Function\+: \hyperlink{uart_8c_a72472a028659fcc43465788be15420d8}{Get\+Char()} ~\newline
+Precondition\+: U\+A\+RT initialized ~\newline
+Input\+: None ~\newline
+Output\+: U\+A\+R\+T\+\_\+\+S\+U\+C\+E\+SS\+: If there is some data ~\newline
+ U\+A\+R\+T\+\_\+\+F\+A\+IL\+: if there is no data. ~\newline
+Side Effects\+: None. ~\newline
+Overview\+: Gets the data from U\+A\+RT RX F\+I\+FO. ~\newline
+Note\+: None. \mbox{\Hypertarget{uart_8c_a20ee1a24682de469e87cd0220987bbf8}\label{uart_8c_a20ee1a24682de469e87cd0220987bbf8}} 
+\index{uart.\+c@{uart.\+c}!Put\+Char@{Put\+Char}}
+\index{Put\+Char@{Put\+Char}!uart.\+c@{uart.\+c}}
+\subsubsection{\texorpdfstring{Put\+Char()}{PutChar()}}
+{\footnotesize\ttfamily void Put\+Char (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{tx\+Char }\end{DoxyParamCaption})}
+
+~\newline
+Function\+: \hyperlink{uart_8c_a20ee1a24682de469e87cd0220987bbf8}{Put\+Char()} ~\newline
+Precondition\+: ~\newline
+Input\+: None ~\newline
+Output\+: None ~\newline
+Side Effects\+: None. ~\newline
+Overview\+: Puts the data into U\+A\+RT tx reg for transmission. ~\newline
+Note\+: None. \mbox{\Hypertarget{uart_8c_a40b4da769436009e31f46de19864a2ac}\label{uart_8c_a40b4da769436009e31f46de19864a2ac}} 
+\index{uart.\+c@{uart.\+c}!Uart\+Close@{Uart\+Close}}
+\index{Uart\+Close@{Uart\+Close}!uart.\+c@{uart.\+c}}
+\subsubsection{\texorpdfstring{Uart\+Close()}{UartClose()}}
+{\footnotesize\ttfamily int Uart\+Close (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+~\newline
+ Function\+: \hyperlink{uart_8c_a40b4da769436009e31f46de19864a2ac}{Uart\+Close()} ~\newline
+ Precondition\+: ~\newline
+ Input\+: None ~\newline
+ Output\+: None. ~\newline
+ Side Effects\+: None. ~\newline
+ Overview\+: Closes U\+A\+RT connection. ~\newline
+ Note\+: No function currently \mbox{\Hypertarget{uart_8c_aa8a279fa598352045040b41a7349be32}\label{uart_8c_aa8a279fa598352045040b41a7349be32}} 
+\index{uart.\+c@{uart.\+c}!Uart\+Init@{Uart\+Init}}
+\index{Uart\+Init@{Uart\+Init}!uart.\+c@{uart.\+c}}
+\subsubsection{\texorpdfstring{Uart\+Init()}{UartInit()}}
+{\footnotesize\ttfamily int Uart\+Init (\begin{DoxyParamCaption}\item[{uint64\+\_\+t}]{pbclock,  }\item[{uint32\+\_\+t}]{br }\end{DoxyParamCaption})}
+
+~\newline
+ Function\+: \hyperlink{uart_8c_aa8a279fa598352045040b41a7349be32}{Uart\+Init()} ~\newline
+ Precondition\+: ~\newline
+ Input\+: PB Clock and baudrate ~\newline
+Returns\+: U\+A\+R\+T\+\_\+\+S\+U\+C\+C\+E\+SS if Ok. ~\newline
+ U\+A\+R\+T\+X\+\_\+\+X\+XX error codes in case of failure (see \hyperlink{uart_8h}{uart.\+h}) ~\newline
+Side Effects\+: Takes control of U1A TX and RX pins ~\newline
+Overview\+: Initializes U\+A\+RT.
+
+~\newline
+Note\+: Only supports 40\+M\+Hz P\+B\+C\+L\+O\+CK, U\+A\+R\+T1A and ~\newline
+ \{9600/115200\},8,n,1 configuration 

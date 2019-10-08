@@ -1,0 +1,34 @@
+digraph "Balanca.X/main.c"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node0 [label="Balanca.X/main.c",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node0 -> Node1 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 [label="../BalancaCommon/ConfigBits\l/config_bits.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$config__bits_8h_source.html"];
+  Node0 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="../BalancaCommon/Timers\l_poll/config_timer.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$_timers__poll_2config__timer_8h_source.html"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="stdint.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node0 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="../BalancaCommon/ADC\l/config_adc.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$config__adc_8h.html",tooltip="Define prototypes of adc.c. "];
+  Node4 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="../BalancaCommon/UART\l/uart.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$uart_8h.html",tooltip="Define prototypes and return codes of uart.c. "];
+  Node5 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="../BalancaCommon/Temperature\l/temperature.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$temperature_8h.html",tooltip="Define prototypes of temperature.c. "];
+  Node0 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="../BalancaCommon/Weight\l/weight.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$weight_8h.html",tooltip="Define prototypes of weight.c. "];
+  Node7 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="xc.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node0 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="sys/attribs.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node0 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="stdio.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node0 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="stdlib.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node0 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node0 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="math.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+}

@@ -1,0 +1,11 @@
+digraph "BalancaCommon/Temperature" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_819260ec592670a27393b26e7734992f {
+    graph [ bgcolor="#ddddee", pencolor="black", label="BalancaCommon" fontname="Helvetica", fontsize="10", URL="dir_819260ec592670a27393b26e7734992f.html"]
+  dir_3d568705be6189850ccfcd66c71a9226 [shape=box, label="Temperature", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_3d568705be6189850ccfcd66c71a9226.html"];
+  }
+  dir_8638dcf13c8cd27215d1ed8edaaca62f [shape=box label="ADC" URL="dir_8638dcf13c8cd27215d1ed8edaaca62f.html"];
+  dir_3d568705be6189850ccfcd66c71a9226->dir_8638dcf13c8cd27215d1ed8edaaca62f [headlabel="1", labeldistance=1.5 headhref="dir_000016_000012.html"];
+}
