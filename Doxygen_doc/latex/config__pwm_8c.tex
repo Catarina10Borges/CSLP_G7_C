@@ -1,0 +1,67 @@
+\hypertarget{config__pwm_8c}{}\section{Balanca\+Common/\+P\+W\+M/config\+\_\+pwm.c File Reference}
+\label{config__pwm_8c}\index{Balanca\+Common/\+P\+W\+M/config\+\_\+pwm.\+c@{Balanca\+Common/\+P\+W\+M/config\+\_\+pwm.\+c}}
+
+
+Configure the P\+WM (Pulse Width Modulation) and it is defined to calculate the height.  
+
+
+{\ttfamily \#include \char`\"{}config\+\_\+pwm.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Timers\+\_\+poll/config\+\_\+timer.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+Include dependency graph for config\+\_\+pwm.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{config__pwm_8c_a88b052d77462a0ed47c6b5091d9298b0}{config\+\_\+pwm} (void)
+\item 
+void \hyperlink{config__pwm_8c_af382acaa3e9845da3d2044caac776d06}{set\+P\+WM} (unsigned int duty\+Cycle)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Configure the P\+WM (Pulse Width Modulation) and it is defined to calculate the height. 
+
+\begin{DoxyAuthor}{Author}
+Catarina Borges, 73865 
+
+Ricardo Torres, 64507
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Created on 8 de Março de 2019, 12\+:30 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{config__pwm_8c_a88b052d77462a0ed47c6b5091d9298b0}\label{config__pwm_8c_a88b052d77462a0ed47c6b5091d9298b0}} 
+\index{config\+\_\+pwm.\+c@{config\+\_\+pwm.\+c}!config\+\_\+pwm@{config\+\_\+pwm}}
+\index{config\+\_\+pwm@{config\+\_\+pwm}!config\+\_\+pwm.\+c@{config\+\_\+pwm.\+c}}
+\subsubsection{\texorpdfstring{config\+\_\+pwm()}{config\_pwm()}}
+{\footnotesize\ttfamily void config\+\_\+pwm (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+~\newline
+Function\+: \hyperlink{config__pwm_8c_a88b052d77462a0ed47c6b5091d9298b0}{config\+\_\+pwm()} ~\newline
+Precondition\+: Timer initialized ~\newline
+Input\+: None ~\newline
+Output\+: None ~\newline
+Returns\+: Nothing ~\newline
+Side Effects\+: None ~\newline
+Overview\+: Configurates the P\+WM. ~\newline
+ Timer 3 is clock source of O\+CM ~\newline
+Note\+: None \mbox{\Hypertarget{config__pwm_8c_af382acaa3e9845da3d2044caac776d06}\label{config__pwm_8c_af382acaa3e9845da3d2044caac776d06}} 
+\index{config\+\_\+pwm.\+c@{config\+\_\+pwm.\+c}!set\+P\+WM@{set\+P\+WM}}
+\index{set\+P\+WM@{set\+P\+WM}!config\+\_\+pwm.\+c@{config\+\_\+pwm.\+c}}
+\subsubsection{\texorpdfstring{set\+P\+W\+M()}{setPWM()}}
+{\footnotesize\ttfamily void set\+P\+WM (\begin{DoxyParamCaption}\item[{unsigned int}]{duty\+Cycle }\end{DoxyParamCaption})}
+
+~\newline
+Function\+: set\+\_\+pwm() ~\newline
+Precondition\+: D\+I\+V\+I\+D\+E\+R\+\_\+\+C\+O\+N\+S\+T3 initialized ~\newline
+Input\+: duty\+\_\+cycle ~\newline
+Output\+: value of P\+WM ~\newline
+Returns\+: Nothing ~\newline
+Side Effects\+: None ~\newline
+Overview\+: Sets the P\+WM. ~\newline
+Note\+: duty\+\_\+cycle must be in the range \mbox{[}0,100\mbox{]} 

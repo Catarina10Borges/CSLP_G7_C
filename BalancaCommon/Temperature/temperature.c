@@ -1,10 +1,11 @@
-/*
- * File: temperature.c
+/**
+ * @file temperature.c
  *
- * Author: Catarina Borges, 73865
- * Author: Ricardo Torres, 64507
+ * @author Catarina Borges, 73865
+ * @author Ricardo Torres, 64507
  *
- * Created on 26 de Março de 2019, 11:47
+ * @date Created on 26 de Marco de 2019, 11:47
+ * @brief Calculates the Temperature in Celsius degrees.
 */
 
 #include "../ADC/config_adc.h"
@@ -14,6 +15,16 @@
 #include <xc.h>
 
 
+/**
+* <br>Function:     temperature()
+* <br>Precondition: ADC configured
+* <br>Input:        None
+* <br>Output:       Temperature in ºC degrees.
+* <br>Returns:      Average value of temperature in ºC degrees.     
+* <br>Side Effects: None
+* <br>Overview:     Convertes tension to degrees, from a linear regression.
+* <br>Note:         None
+*/
 uint32_t temperature(void)
 {
     // Variables declaration
@@ -42,3 +53,4 @@ uint32_t temperature(void)
 
     return avg;
 }
+/***************************************End Of File*************************************/

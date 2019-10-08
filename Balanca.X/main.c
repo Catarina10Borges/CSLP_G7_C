@@ -1,10 +1,14 @@
-/* 
- * File:   main.c // IMC
+/** 
+ * @file   main.c 
  * 
- * Author: Catarina Borges, 73865
- * Author: Ricardo Torres, 64507
+ * @author Catarina Borges, 73865
+ * @author Ricardo Torres, 64507
  *
- * Created on 26 de Março de 2019, 11:47
+ * @date Created on 26 de Marco de 2019, 11:47
+ * @brief Shows a menu with all the funcitonalities.
+ * <br> shows and calculates the height in meters
+ * <br> shows weight in Kg
+ * <br> shows the temperature in Celsius degrees
  */
 
 #include "../BalancaCommon/ConfigBits/config_bits.h"
@@ -119,6 +123,18 @@ void init()
 }  
 
 
+/**
+* <br>Function:     main()
+* <br>Precondition: None
+* <br>Input:        None
+* <br>Output:       None
+* <br>Returns:      The weight, height and the IMC of the individual.     
+* <br>Side Effects: None
+* <br>Overview:     Prints the Menu to select what we want to measure,
+      <br>          Height, weight and the IMC.
+* <br>Note:         None
+* 
+*/
 int main(void)
 {     
     INTCONSET = _INTCON_MVEC_MASK;
@@ -186,13 +202,23 @@ int main(void)
     EnableInterrupts();
     printMenu();
     
-
     while(1)
     {
         print_Value();
     }
 }
 
+/**
+* <br>Function:     printMenu()
+* <br>Precondition: None
+* <br>Input:        None
+* <br>Output:       None
+* <br>Returns:      Nothing     
+* <br>Side Effects: None
+* <br>Overview:     Shows the Menu.
+* <br>Note:         None
+* 
+*/
 void printMenu(void)
 {
     //Show menu
@@ -209,6 +235,18 @@ void printMenu(void)
  
 }
 
+/**
+* <br>Function:     print_Value()
+* <br>Precondition: None
+* <br>Input:        None
+* <br>Output:       None
+* <br>Returns:      Nothing     
+* <br>Side Effects: None
+* <br>Overview:     Is responsible to show the values selected by through
+   <br>             the Menu.
+* <br>Note:         None
+* 
+*/
 void print_Value(void)
 {
     uint8_t number;
@@ -300,6 +338,18 @@ void print_Value(void)
     }
 }
 
+/**
+* <br>Function:     ReadChar()
+* <br>Precondition: None
+* <br>Input:        None
+* <br>Output:       None
+* <br>Returns:      Returns a char     
+* <br>Side Effects: None
+* <br>Overview:     Gets the data from UART RX FIFO
+* <br>Note:         Only supports 40MHz PBCLOCK, UART1A and 
+*  <br>             {9600/115200},8,n,1 configuration
+* 
+*/
 unsigned char ReadChar(void)
 {
     if(U1STAbits.OERR)
@@ -308,4 +358,4 @@ unsigned char ReadChar(void)
 
     return(U1RXREG); // Return char
 }
-
+/***************************************End Of File*************************************/

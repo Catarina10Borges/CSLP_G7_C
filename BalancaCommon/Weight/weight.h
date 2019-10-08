@@ -1,10 +1,11 @@
-/* 
- * File:   weight.h
+/** 
+ * @file   weight.h
  *
- * Author: Catarina Borges, 73865
- * Author: Ricardo Torres, 64507
+ * @author Catarina Borges, 73865
+ * @author Ricardo Torres, 64507
  *
- * Created on 26 de Março de 2019, 11:48
+ * @date Created on 26 de Marco de 2019, 11:48
+ * @brief Define prototypes of weight.c 
  */
 
 #ifndef WEGHT_H
@@ -12,6 +13,7 @@
 
 #include <stdint.h>
 
+// Define prototypes (public interface)
 float Cal_Weight(void);
 //uint32_t Read_Weight();
 

@@ -1,14 +1,14 @@
-/* 
- * File:   uart.c
- * Author: Paulo Pedreiras
+/** 
+ * @file   uart.c
+ * @author Paulo Pedreiras
  *
- * Created on Jan 28, 2019
+ * @date Created on Jan 28, 2019
  * MPLAB X IDE v5.10 + XC32 v2.15
  *
  * Target: Digilent chipKIT MAx32 board 
  * 
  * Overview:
- *          Set of functions to handle the UART       
+ * @brief Set of functions to handle the UART       
  
  * Notes: Partially based on the bootloader code from Microchip
  * 
@@ -17,25 +17,24 @@
  *      2019-01-28: updated to MPLAB X IDE v5.\0 + XC32 v2.15
  */
 
-
 #include <xc.h>
 #include <stdlib.h>
 #include <stdint.h>
 #include "uart.h"
 
-/********************************************************************
-* Function: 	UartInit()
-* Precondition: 
-* Input: 		PB Clock and baudrate
-* Returns:      UART_SUCCESS if Ok.
-*               UARTX_XXX error codes in case of failure (see uart.h)
-* Side Effects:	Takes control of U1A TX and RX pins
-* Overview:     Initializes UART.
+/**
+* <br> Function: 	UartInit()
+* <br> Precondition: 
+* <br> Input: 		PB Clock and baudrate
+* <br>Returns:      UART_SUCCESS if Ok.
+*     <br>          UARTX_XXX error codes in case of failure (see uart.h)
+* <br>Side Effects:	Takes control of U1A TX and RX pins
+* <br>Overview:     Initializes UART.
 *		
-* Note:		 	Only supports 40MHz PBCLOCK, UART1A and 
-*               {9600/115200},8,n,1 configuration
+* <br>Note:		 	Only supports 40MHz PBCLOCK, UART1A and 
+*     <br>          {9600/115200},8,n,1 configuration
 * 
-********************************************************************/	
+*/	
 int UartInit(uint64_t pbclock, uint32_t br)
 {
    if(pbclock != 40000000L) 
@@ -81,15 +80,15 @@ int UartInit(uint64_t pbclock, uint32_t br)
 }	
 
 
-/********************************************************************
-* Function: 	UartClose()
-* Precondition: 
-* Input: 		None
-* Output:		None.
-* Side Effects:	None.
-* Overview:     Closes UART connection.
-* Note:		 	No function currently
-********************************************************************/	
+/**
+* <br> Function: 	UartClose()
+* <br> Precondition: 
+* <br> Input: 		None
+* <br> Output:		None.
+* <br> Side Effects:	None.
+* <br> Overview:     Closes UART connection.
+* <br> Note:		 	No function currently
+*/	
 int UartClose(void)
 {
 	//TODO: do some closing operation if required.	
@@ -97,16 +96,16 @@ int UartClose(void)
 }	
 
 
-/********************************************************************
-* Function: 	GetChar()
-* Precondition: UART initialized
-* Input: 		None
-* Output:		UART_SUCESS: If there is some data
- *              UART_FAIL: if there is no data.
-* Side Effects:	None.
-* Overview:     Gets the data from UART RX FIFO.
-* Note:		 	None.
-********************************************************************/
+/**
+* <br>Function: 	GetChar()
+* <br>Precondition: UART initialized
+* <br>Input: 		None
+* <br>Output:		UART_SUCESS: If there is some data
+*  <br>            UART_FAIL: if there is no data.
+* <br>Side Effects:	None.
+* <br>Overview:     Gets the data from UART RX FIFO.
+* <br>Note:		 	None.
+*/
 int GetChar(uint8_t *byte)
 {
 	char dummy;
@@ -128,15 +127,15 @@ int GetChar(uint8_t *byte)
 }
 
 
-/********************************************************************
-* Function: 	PutChar()
-* Precondition: 
-* Input: 		None
-* Output:		None
-* Side Effects:	None.
-* Overview:     Puts the data into UART tx reg for transmission.
-* Note:		 	None.
-********************************************************************/
+/**
+* <br>Function: 	PutChar()
+* <br>Precondition: 
+* <br>Input: 		None
+* <br>Output:		None
+* <br>Side Effects:	None.
+* <br>Overview:     Puts the data into UART tx reg for transmission.
+* <br>Note:		 	None.
+*/
 void PutChar(uint8_t txChar)
 {
     while(U1STAbits.UTXBF); // wait for TX buffer to be empty

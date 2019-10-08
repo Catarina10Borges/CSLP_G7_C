@@ -1,20 +1,32 @@
-/* 
- * File:   weight.h
+/** 
+ * @file   weight.c
  *
- * Author: Catarina Borges, 73865
- * Author: Ricardo Torres, 64507
+ * @author Catarina Borges, 73865
+ * @author Ricardo Torres, 64507
  *
- * Created on 26 de Março de 2019, 11:47
+ * @date Created on 26 de Marco de 2019, 11:47
+ * @brief Calculates the weight in Kg.
  */
 
 #include "../ADC/config_adc.h"
 #include "../Weight/weight.h"
 
 #include <xc.h>
+
 //static uint32_t weight;
 //uint32_t value;
 //unsigned int weight_value;
 
+/**
+* <br>Function:     Cal_Weight()
+* <br>Precondition: ADC has to be configured
+* <br>Input:        None
+* <br>Output:       None
+* <br>Returns:      Weight in Kg.     
+* <br>Side Effects: None
+* <br>Overview:     Converts a value of tension in eight in Kg
+* <br>Note:         None
+*/
 float Cal_Weight(void)
 {    
     // Variables Declaration
@@ -51,3 +63,5 @@ float Cal_Weight(void)
 //{
 //    return value;
 //}
+
+/***************************************End Of File*************************************/

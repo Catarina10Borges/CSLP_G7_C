@@ -1,10 +1,11 @@
-/*
- * File: config_pwm.h
+/**
+ * @file config_pwm.h
  *
- * Author: Catarina Borges, 73865
- * Author: Ricardo Torres, 64507
+ * @author Catarina Borges, 73865
+ * @author Ricardo Torres, 64507
  *
- * Created on 8 de Março de 2019, 12:32
+ * @date Created on 8 de Marco de 2019, 12:32
+ * @brief Define prototypes of config_pwm.c 
 */
 
 #ifndef ConfigPWM_H
@@ -12,6 +13,7 @@
 
 #include <stdint.h>
 
+// Define prototypes (public interface)
 void config_pwm (void);
 void setPWM(unsigned int dutyCycle);
 

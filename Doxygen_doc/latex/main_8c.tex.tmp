@@ -1,0 +1,183 @@
+\hypertarget{main_8c}{}\section{Balanca.\+X/main.c File Reference}
+\label{main_8c}\index{Balanca.\+X/main.\+c@{Balanca.\+X/main.\+c}}
+
+
+Shows a menu with all the funcitonalities. ~\newline
+ shows and calculates the height in meters ~\newline
+ shows weight in Kg ~\newline
+ shows the temperature in Celsius degrees.  
+
+
+{\ttfamily \#include \char`\"{}../\+Balanca\+Common/\+Config\+Bits/config\+\_\+bits.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Balanca\+Common/\+Timers\+\_\+poll/config\+\_\+timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Balanca\+Common/\+A\+D\+C/config\+\_\+adc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Balanca\+Common/\+U\+A\+R\+T/uart.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Balanca\+Common/\+Temperature/temperature.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Balanca\+Common/\+Weight/weight.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+{\ttfamily \#include $<$sys/attribs.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+Include dependency graph for main.\+c\+:
+% FIG 0
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a97ee8be60ff9ae1cfface03bc50f1d94}\label{main_8c_a97ee8be60ff9ae1cfface03bc50f1d94}} 
+\#define {\bfseries S\+Y\+S\+C\+LK}~80000000L
+\item 
+\mbox{\Hypertarget{main_8c_a6ded8983aecdc8079f788f9803a11a22}\label{main_8c_a6ded8983aecdc8079f788f9803a11a22}} 
+\#define {\bfseries P\+B\+C\+L\+O\+CK}~40000000L
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{main_8c_ad0d0f0ce9c3289b4bd6ecfae02494b2f}{print\+Menu} (void)
+\item 
+unsigned char \hyperlink{main_8c_a13bdb5d5f31f58192ba5223d4d17d15f}{Read\+Char} (void)
+\item 
+void \hyperlink{main_8c_aa959660c52a51b01426ace8a5de8d3f2}{print\+\_\+\+Value} (void)
+\item 
+\mbox{\Hypertarget{main_8c_a360f67c504ebee80bc6a785f411dcb7e}\label{main_8c_a360f67c504ebee80bc6a785f411dcb7e}} 
+void {\bfseries Enable\+Interrupts} ()
+\item 
+\mbox{\Hypertarget{main_8c_aceaf8dc8d77414a0fb8ac9603761e58b}\label{main_8c_aceaf8dc8d77414a0fb8ac9603761e58b}} 
+void {\bfseries \+\_\+\+\_\+\+I\+SR} (\+\_\+\+T\+I\+M\+E\+R\+\_\+2\+\_\+\+V\+E\+C\+T\+OR, I\+P\+L7\+A\+U\+TO)
+\item 
+\mbox{\Hypertarget{main_8c_ad43a7a2cb4d597cffc8dd4c8cafb848e}\label{main_8c_ad43a7a2cb4d597cffc8dd4c8cafb848e}} 
+void {\bfseries \+\_\+\+\_\+\+I\+SR} (\+\_\+\+T\+I\+M\+E\+R\+\_\+3\+\_\+\+V\+E\+C\+T\+OR, I\+P\+L5\+A\+U\+TO)
+\item 
+\mbox{\Hypertarget{main_8c_ab508d386af6ef03f95df4579429ed76c}\label{main_8c_ab508d386af6ef03f95df4579429ed76c}} 
+void {\bfseries \+\_\+\+\_\+\+I\+SR} (\+\_\+\+T\+I\+M\+E\+R\+\_\+4\+\_\+\+V\+E\+C\+T\+OR, I\+P\+L5\+A\+U\+TO)
+\item 
+\mbox{\Hypertarget{main_8c_a02fd73d861ef2e4aabb38c0c9ff82947}\label{main_8c_a02fd73d861ef2e4aabb38c0c9ff82947}} 
+void {\bfseries init} ()
+\item 
+int \hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main} (void)
+\end{DoxyCompactItemize}
+\subsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{main_8c_a2ba9dc6e0a7992ea99a0d076e23690da}\label{main_8c_a2ba9dc6e0a7992ea99a0d076e23690da}} 
+uint8\+\_\+t {\bfseries counter\+\_\+timer4}
+\item 
+\mbox{\Hypertarget{main_8c_a31d9a233a4877532be0dd6a58c94c01f}\label{main_8c_a31d9a233a4877532be0dd6a58c94c01f}} 
+uint16\+\_\+t {\bfseries counter\+\_\+timer2}
+\item 
+\mbox{\Hypertarget{main_8c_a70b95625c1b0fbfb2c2defdc3dd0b14f}\label{main_8c_a70b95625c1b0fbfb2c2defdc3dd0b14f}} 
+uint8\+\_\+t {\bfseries imprimiu\+\_\+menu} = 0
+\item 
+\mbox{\Hypertarget{main_8c_a10bb952c8da3d25824439228562c8a61}\label{main_8c_a10bb952c8da3d25824439228562c8a61}} 
+uint32\+\_\+t {\bfseries peso} = 0
+\item 
+\mbox{\Hypertarget{main_8c_aa1a446051ec05e825038993de4e99d01}\label{main_8c_aa1a446051ec05e825038993de4e99d01}} 
+float {\bfseries altura} = 0
+\item 
+\mbox{\Hypertarget{main_8c_a44f0a3900a47a231d049bb944f51731f}\label{main_8c_a44f0a3900a47a231d049bb944f51731f}} 
+float {\bfseries altura\+\_\+\+US} = 2
+\item 
+\mbox{\Hypertarget{main_8c_ae73654f333e4363463ad8c594eca1905}\label{main_8c_ae73654f333e4363463ad8c594eca1905}} 
+uint32\+\_\+t {\bfseries time} = 0
+\item 
+\mbox{\Hypertarget{main_8c_a19b562d142e3552605b06e59cdb20f4f}\label{main_8c_a19b562d142e3552605b06e59cdb20f4f}} 
+uint32\+\_\+t {\bfseries tension} = 0
+\item 
+\mbox{\Hypertarget{main_8c_aaf5d342e977c5857e99310eea0e72e4b}\label{main_8c_aaf5d342e977c5857e99310eea0e72e4b}} 
+uint32\+\_\+t {\bfseries c} = 0
+\item 
+\mbox{\Hypertarget{main_8c_a86988a65e0d3ece7990c032c159786d6}\label{main_8c_a86988a65e0d3ece7990c032c159786d6}} 
+uint32\+\_\+t {\bfseries count} =0
+\item 
+\mbox{\Hypertarget{main_8c_a607f39712288bbe0d8f28904df4a92bd}\label{main_8c_a607f39712288bbe0d8f28904df4a92bd}} 
+uint32\+\_\+t {\bfseries sum} = 0
+\item 
+\mbox{\Hypertarget{main_8c_a0a959357aa23f6faa63b3c88eff65e01}\label{main_8c_a0a959357aa23f6faa63b3c88eff65e01}} 
+float {\bfseries distancia}
+\item 
+\mbox{\Hypertarget{main_8c_ae71a157cc52be7c78ac77c8dfef9199b}\label{main_8c_ae71a157cc52be7c78ac77c8dfef9199b}} 
+uint32\+\_\+t {\bfseries avg} = 0
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Shows a menu with all the funcitonalities. ~\newline
+ shows and calculates the height in meters ~\newline
+ shows weight in Kg ~\newline
+ shows the temperature in Celsius degrees. 
+
+\begin{DoxyAuthor}{Author}
+Catarina Borges, 73865 
+
+Ricardo Torres, 64507
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Created on 26 de Marco de 2019, 11\+:47 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{main_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+~\newline
+Function\+: \hyperlink{main_8c_a840291bc02cba5474a4cb46a9b9566fe}{main()} ~\newline
+Precondition\+: None ~\newline
+Input\+: None ~\newline
+Output\+: None ~\newline
+Returns\+: The weight, height and the I\+MC of the individual. ~\newline
+Side Effects\+: None ~\newline
+Overview\+: Prints the Menu to select what we want to measure, ~\newline
+ Height, weight and the I\+MC. ~\newline
+Note\+: None \mbox{\Hypertarget{main_8c_aa959660c52a51b01426ace8a5de8d3f2}\label{main_8c_aa959660c52a51b01426ace8a5de8d3f2}} 
+\index{main.\+c@{main.\+c}!print\+\_\+\+Value@{print\+\_\+\+Value}}
+\index{print\+\_\+\+Value@{print\+\_\+\+Value}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{print\+\_\+\+Value()}{print\_Value()}}
+{\footnotesize\ttfamily void print\+\_\+\+Value (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+~\newline
+Function\+: \hyperlink{main_8c_aa959660c52a51b01426ace8a5de8d3f2}{print\+\_\+\+Value()} ~\newline
+Precondition\+: None ~\newline
+Input\+: None ~\newline
+Output\+: None ~\newline
+Returns\+: Nothing ~\newline
+Side Effects\+: None ~\newline
+Overview\+: Is responsible to show the values selected by through ~\newline
+ the Menu. ~\newline
+Note\+: None Here is the call graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{main_8c_ad0d0f0ce9c3289b4bd6ecfae02494b2f}\label{main_8c_ad0d0f0ce9c3289b4bd6ecfae02494b2f}} 
+\index{main.\+c@{main.\+c}!print\+Menu@{print\+Menu}}
+\index{print\+Menu@{print\+Menu}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{print\+Menu()}{printMenu()}}
+{\footnotesize\ttfamily void print\+Menu (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+~\newline
+Function\+: \hyperlink{main_8c_ad0d0f0ce9c3289b4bd6ecfae02494b2f}{print\+Menu()} ~\newline
+Precondition\+: None ~\newline
+Input\+: None ~\newline
+Output\+: None ~\newline
+Returns\+: Nothing ~\newline
+Side Effects\+: None ~\newline
+Overview\+: Shows the Menu. ~\newline
+Note\+: None \mbox{\Hypertarget{main_8c_a13bdb5d5f31f58192ba5223d4d17d15f}\label{main_8c_a13bdb5d5f31f58192ba5223d4d17d15f}} 
+\index{main.\+c@{main.\+c}!Read\+Char@{Read\+Char}}
+\index{Read\+Char@{Read\+Char}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{Read\+Char()}{ReadChar()}}
+{\footnotesize\ttfamily unsigned char Read\+Char (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+~\newline
+Function\+: \hyperlink{main_8c_a13bdb5d5f31f58192ba5223d4d17d15f}{Read\+Char()} ~\newline
+Precondition\+: None ~\newline
+Input\+: None ~\newline
+Output\+: None ~\newline
+Returns\+: Returns a char ~\newline
+Side Effects\+: None ~\newline
+Overview\+: Gets the data from U\+A\+RT RX F\+I\+FO ~\newline
+Note\+: Only supports 40\+M\+Hz P\+B\+C\+L\+O\+CK, U\+A\+R\+T1A and ~\newline
+ \{9600/115200\},8,n,1 configuration Here is the caller graph for this function\+:
+% FIG 2

@@ -1,3 +1,6 @@
+/**
+@brief Configuration Bit Settings
+*/
 #pragma once
 
 // PIC32MX795F512L Configuration Bit Settings

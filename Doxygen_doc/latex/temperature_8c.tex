@@ -1,0 +1,52 @@
+\hypertarget{temperature_8c}{}\section{Balanca\+Common/\+Temperature/temperature.c File Reference}
+\label{temperature_8c}\index{Balanca\+Common/\+Temperature/temperature.\+c@{Balanca\+Common/\+Temperature/temperature.\+c}}
+
+
+Calculates the Temperature in Celsius degrees.  
+
+
+{\ttfamily \#include \char`\"{}../\+A\+D\+C/config\+\_\+adc.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../\+Timers\+\_\+poll/config\+\_\+timer.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}temperature.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$xc.\+h$>$}\newline
+Include dependency graph for temperature.\+c\+:
+% FIG 0
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+uint32\+\_\+t \hyperlink{temperature_8c_aa971f9ea35a2086046856ca483a39ad3}{temperature} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Calculates the Temperature in Celsius degrees. 
+
+\begin{DoxyAuthor}{Author}
+Catarina Borges, 73865 
+
+Ricardo Torres, 64507
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Created on 26 de Marco de 2019, 11\+:47 
+\end{DoxyDate}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{temperature_8c_aa971f9ea35a2086046856ca483a39ad3}\label{temperature_8c_aa971f9ea35a2086046856ca483a39ad3}} 
+\index{temperature.\+c@{temperature.\+c}!temperature@{temperature}}
+\index{temperature@{temperature}!temperature.\+c@{temperature.\+c}}
+\subsubsection{\texorpdfstring{temperature()}{temperature()}}
+{\footnotesize\ttfamily uint32\+\_\+t temperature (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+~\newline
+Function\+: \hyperlink{temperature_8c_aa971f9ea35a2086046856ca483a39ad3}{temperature()} ~\newline
+Precondition\+: A\+DC configured ~\newline
+Input\+: None ~\newline
+Output\+: Temperature in ºC degrees. ~\newline
+Returns\+: Average value of temperature in ºC degrees. ~\newline
+Side Effects\+: None ~\newline
+Overview\+: Convertes tension to degrees, from a linear regression. ~\newline
+Note\+: None Here is the call graph for this function\+:
+% FIG 1
+Here is the caller graph for this function\+:
+% FIG 2

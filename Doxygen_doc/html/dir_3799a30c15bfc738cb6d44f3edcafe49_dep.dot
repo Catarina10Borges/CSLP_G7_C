@@ -1,0 +1,12 @@
+digraph "Balanca.X" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_3799a30c15bfc738cb6d44f3edcafe49 {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_3799a30c15bfc738cb6d44f3edcafe49.html"];
+    dir_3799a30c15bfc738cb6d44f3edcafe49 [shape=plaintext label="Balanca.X"];
+    dir_b9347e9a495e8f26b3878a289df79b5e [shape=box label="build" color="red" fillcolor="white" style="filled" URL="dir_b9347e9a495e8f26b3878a289df79b5e.html"];
+  }
+  dir_819260ec592670a27393b26e7734992f [shape=box label="BalancaCommon" fillcolor="white" style="filled" color="red" URL="dir_819260ec592670a27393b26e7734992f.html"];
+  dir_3799a30c15bfc738cb6d44f3edcafe49->dir_819260ec592670a27393b26e7734992f [headlabel="4", labeldistance=1.5 headhref="dir_000000_000011.html"];
+}
