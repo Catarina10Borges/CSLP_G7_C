@@ -11,12 +11,12 @@
  * <br> shows the temperature in Celsius degrees
  */
 
-#include "../BalancaCommon/ConfigBits/config_bits.h"
-#include "../BalancaCommon/Timers_poll/config_timer.h"
-#include "../BalancaCommon/ADC/config_adc.h"
-#include "../BalancaCommon/UART/uart.h"
-#include "../BalancaCommon/Temperature/temperature.h"
-#include "../BalancaCommon/Weight/weight.h"
+#include "BalancaCommon/ConfigBits/config_bits.h"
+#include "BalancaCommon/Timers_poll/config_timer.h"
+#include "BalancaCommon/ADC/config_adc.h"
+#include "BalancaCommon/UART/uart.h"
+#include "BalancaCommon/Temperature/temperature.h"
+#include "BalancaCommon/Weight/weight.h"
 
 #include <xc.h>
 #include <sys/attribs.h>

@@ -16,7 +16,7 @@
  *
  */
 
-#include "adc.h"
+#include "config_adc.h"
 #include <xc.h>
 #include <stdlib.h>
 #include <stdint.h>
